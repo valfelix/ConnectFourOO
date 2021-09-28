@@ -1,0 +1,74 @@
+* {
+  margin: auto;
+  text-align: center;
+  background-color: cornsilk;
+}
+
+h1 {
+  text-align: center;
+  padding: 1em;
+}
+
+input {
+  margin: 1em;
+  border: 2px solid black;
+  display: inline-block;
+}
+
+input:focus {
+  border: 3px solid gold;
+}
+
+button {
+  background-color: cornsilk;
+  color: black;
+  border: 2px solid gold;
+  transition-duration: 0.4s;
+  display: inline-block;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+button:hover {
+  background-color: gold; 
+  color: white;
+}
+
+/* game board table */
+
+#board td {
+  width: 50px;
+  height: 50px;
+  border: solid 1px #666;
+}
+
+/* pieces are div within game table cells: draw as colored circles */
+
+.piece {
+  margin: 5px;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  animation-name: dropdown;
+  animation-duration: 1s;
+}
+
+@keyframes dropdown {
+  from {
+    transform: translateY(-400px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+/* column-top is table row of clickable areas for each column */
+
+#column-top td {
+  border: dashed 1px lightgray;
+}
+
+#column-top td:hover {
+  background-color: gold;
+  transition: 0.5s;
+}
